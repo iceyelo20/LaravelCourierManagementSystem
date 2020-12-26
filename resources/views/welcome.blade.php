@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <link rel="icon" href={{ asset('admin/img/logo.svg') }}>
+
   <title>Courier and Management System</title>
 
   <!-- Bootstrap core CSS -->

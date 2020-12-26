@@ -14,6 +14,8 @@
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="{{ asset('admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
 
+  <link rel="icon" href={{ asset('admin/img/logo.svg') }}>
+
   @stack('css')
 
   <!-- Theme style -->
