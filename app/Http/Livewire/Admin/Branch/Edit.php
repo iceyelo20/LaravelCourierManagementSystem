@@ -26,6 +26,7 @@ class Edit extends Component
         $this->branch_city = $branch->branch_city;
         $this->branch_pin = $branch->branch_pin;
         $this->branch_id = $branch->id;
+        $this->branch_password = $branch_password;
     }
 
     public function render()
