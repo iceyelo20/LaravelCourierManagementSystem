@@ -26,7 +26,7 @@ class Edit extends Component
         $this->branch_city = $branch->branch_city;
         $this->branch_pin = $branch->branch_pin;
         $this->branch_id = $branch->id;
-        $this->branch_password = $branch_password;
+
     }
 
     public function render()
@@ -42,9 +42,7 @@ class Edit extends Component
             'branch_address' => 'required',
             'branch_city' => 'required|string',
             'branch_pin' => 'required|string',
-            'branch_password' => 'min:8|string|required_with:confirm_password|same:confirm_password',
-            'confirm_password' => 'min:8|string'
-
+            'branch_password' => 'same:confirm_password',
         ]);
 
         $branch = Branch::find($this->branch_id);
