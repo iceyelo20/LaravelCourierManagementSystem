@@ -31,7 +31,7 @@ class CreateCouriersTable extends Migration
             $table->string('recipient_pin');
             $table->string('description');
             $table->string('weight');
-            $table->string('price');
+            $table->bigInteger('price');
             $table->string('status');
             $table->timestamps();
         });
