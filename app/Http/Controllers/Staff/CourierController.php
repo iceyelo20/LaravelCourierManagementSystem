@@ -58,7 +58,7 @@ class CourierController extends Controller
     public function delete($id){
 
         Courier::find($id)->delete();
-        return redirect()->back()->with('success','Branch Deleted Successfully');
+        return redirect()->back()->with('success','Courier Deleted Successfully');
     }
 
 }
