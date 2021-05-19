@@ -20,7 +20,7 @@
               </div>
               
               <form id="company-form" method="POST" enctype="multipart/form-data">
-
+              {{ method_field('POST') }}
               @if(count($companies) > 0)
                 @method('PUT')
               @endif
