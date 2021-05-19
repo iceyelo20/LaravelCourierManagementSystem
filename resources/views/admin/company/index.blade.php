@@ -147,11 +147,11 @@
         if(heading == 'Add new Company'){
 
             $('#company-form').attr('action','{{ route('admin.company.store') }}').submit();
+            break;
         }
         else{
 
             $('#company-form').attr('action','{{ route('admin.company.update') }}').submit();
-            break;
         }
     }
 </script>
