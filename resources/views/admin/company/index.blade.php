@@ -144,14 +144,12 @@
 
         var heading = $('#heading').val();
 
-        if(heading == 'Add new Company'){
-
-            $('#company-form').attr('action','{{ route('admin.company.store') }}').submit();
-            break;
-        }
-        else{
+        if(heading == 'Edit existing Company'){
 
             $('#company-form').attr('action','{{ route('admin.company.update') }}').submit();
+        }
+        else{
+            $('#company-form').attr('action','{{ route('admin.company.store') }}').submit();
         }
     }
 </script>
