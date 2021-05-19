@@ -148,6 +148,7 @@
 
             $('#company-form').attr('action','{{ route('admin.company.update') }}').submit();
         }
+        
         else{
             $('#company-form').attr('action','{{ route('admin.company.store') }}').submit();
         }
