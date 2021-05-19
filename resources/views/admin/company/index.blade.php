@@ -24,8 +24,7 @@
               @if(count($companies) > 0)
                 @method('PUT')
               @endif
-              {{ method_field('POST') }}
-                    @csrf
+              @csrf 
                 <div class="card-body">
                 
                     <div class="row">
@@ -51,7 +50,7 @@
                     
                     <div class="col-12 mt-4">
                         <label for="company_address">Company Address</label>
-                        <textarea name="company_address" id="company_address" rows="4" class="form-control" >
+                        <textarea name="company_address" id="company_address" rows="4" class="form-control">
                             @if(count($companies) > 0)
                                 {{ $company->company_address }}
                             @endif
@@ -89,7 +88,7 @@
                     <label for="company_phone">Company Phone</label>
                         <input type="text" name="company_phone" id = "company_phone" class="form-control" 
                         @if(count($companies) > 0)
-                                value = "{{ $company->company_phone }}"
+                            value = "{{ $company->company_phone }}"
                             @endif
                             >
                         @error('company_phone')
@@ -152,6 +151,7 @@
         else{
 
             $('#company-form').attr('action','{{ route('admin.company.update') }}').submit();
+            break;
         }
     }
 </script>
