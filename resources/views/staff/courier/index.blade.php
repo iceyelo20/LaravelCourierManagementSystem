@@ -44,7 +44,7 @@
             <td>
             <center><a href="{{ route('staff.courier.edit',$courier->reference_number) }}" class="btn btn-outline-primary btn-sm">Modify</a>
             <a href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('delete-form-{{ $courier->reference_number }}').submit();" class="btn btn-outline-danger btn-sm">Delete</a></center>
-            <form action="#" style="display: none" method="post" id="delete-form-{{ $courier->reference_number }}">
+            <form action="{{ route('staff.courier.delete',$courier->reference_number) }}" style="display: none" method="post" id="delete-form-{{ $courier->reference_number }}">
             @csrf
             @method('DELETE')
             </form>

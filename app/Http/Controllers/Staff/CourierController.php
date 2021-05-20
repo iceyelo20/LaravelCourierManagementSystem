@@ -55,9 +55,9 @@ class CourierController extends Controller
     
     }
 
-    public function delete($id){
+    public function delete($reference_number){
 
-        Courier::find($id)->delete();
+        $courier = Courier::where('reference_number', '=', $reference_number)->delete();
         return redirect()->back()->with('success','Courier Deleted Successfully');
     }
 

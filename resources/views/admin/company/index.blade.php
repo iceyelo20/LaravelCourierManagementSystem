@@ -124,8 +124,7 @@
                     <div class="card-footer">
                         <div class="row">
                             <div class="col-6">
-                                <button onclick="companyFormSubmit()" class="btn btn-primary">{{ count($companies) > 0 ? 'Update
-                                 Company Details' : 'Save Company Details' }}</button>
+                                <button onclick="companyFormSubmit()" class="btn btn-primary" id="head">{{ count($companies) > 0 ? 'Update Company Details' : 'Save Company Details' }}</button>
                             </div>
 
                             <div class="col-6 text-right">
@@ -142,14 +141,14 @@
 <script>
     function companyFormSubmit(){
 
-        var heading = $('#heading').val();
-
-        if(heading == 'Edit existing Company'){
-
+        var heads = document.getElementById('head').innerHTML;
+        
+        if(heads == 'Update Company Details'){
             $('#company-form').attr('action','{{ route('admin.company.update') }}').submit();
         }
         
         else{
+            
             $('#company-form').attr('action','{{ route('admin.company.store') }}').submit();
         }
     }

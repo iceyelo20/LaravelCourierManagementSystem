@@ -43,7 +43,7 @@
             <td>{{ $courier->updated_at}}</td>
             <td>
             <center><a href="{{ route('staff.courier.edit',$courier->reference_number) }}" class="btn btn-outline-primary btn-sm">Modify</a></center>
-            <form action="#" style="display: none" method="post" id="delete-form-{{ $courier->reference_number }}">
+            <form action="{{ route('staff.courier.delete',$courier->reference_number) }}" style="display: none" method="post" id="delete-form-{{ $courier->reference_number }}">
             @csrf
             @method('DELETE')
             </form>

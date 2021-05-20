@@ -25,7 +25,7 @@
               <div class="inner">
                 
                 @if(count($courier->where('status', '=', '0')) || count($courier->where('status', '=', 'Not Picked Yet')) > 0)
-                <h3>{{ $courier->where('status', '=', '0')->count() || $courier->where('status', '=', 'Not Picked Yet')->count() }}</h3>
+                <h3>{{ $courier->where('status', '=', '0')->count() + $courier->where('status', '=', 'Not Picked Yet')->count() }}</h3>
                 @endif
                 @if(count($courier->where('status', '=', '0')) || count($courier->where('status', '=', 'Not Picked Yet')) < 1)
                 <h3>0</h3>
